@@ -1,0 +1,59 @@
+<ion-view view-title="新机购买">
+    <ion-content has-header="false" style="top:0;">
+        <div class="item item-image">
+            <img src="./img/iphone5s.jpg" />
+        </div>
+        <div class="item">
+            <div class="">
+                <span>iPhone5s</span>
+                <input type="button" class="button button-small button-assertive" style="float:right" value="商品详情" />
+            </div>
+            <div class="item-input">
+                <span>选择颜色：</span>
+                <label class="jld-inline-radio" ng-repeat="model in ['白色','银色','深灰','玫瑰金']">
+                    <input type="radio" name="color" ng-value="model">
+                    <div class="item-content">
+                        {{model}}
+                    </div>
+                </label>
+            </div>
+            <div class="item-input">
+                <span>选择容量：</span>
+                <label class="jld-inline-radio" ng-repeat="model in ['16G','32G','64G','128G']">
+                    <input type="radio" name="stroage" ng-value="model">
+                    <div class="item-content">
+                        {{model}}
+                    </div>
+                </label>
+            </div>
+            <div class="item-input">
+                <span>选择运营商：</span>
+                <label class="jld-inline-radio" ng-repeat="model in ['联通','移动','全网']">
+                    <input type="radio" name="comp" ng-value="model">
+                    <div class="item-content">
+                        {{model}}
+                    </div>
+                </label>
+            </div>
+            <div class="item-input">
+                <span class="">购买数量：</span>
+                <input type="number" style="border:1px solid #ccc">
+            </div>
+        </div>
+        <div class="item">
+            <span>金锣钉价格：{{5088}}元</span>
+            <div class="item item-checkbox" style="border:0;">
+                <label class="checkbox">
+                    <input type="checkbox" name="old" ng-value="model" />
+                </label>
+                选择旧机抵价
+                <br> 您的旧手机{{'iPhone5s'}} 可折价 {{2088}} 元
+            </div>
+            <div class="item item-checkbox" style="border:0;">
+                <label class="checkbox">
+                    <input type="checkbox" name="insurance" ng-value="model" />
+                </label>
+                购买金锣钉碎屏险1年99元
+            </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,11 @@
+<ion-view view-title="新机购买">
+    <ion-content has-header="false" style="top:0;">
+        <div class="padding">
+            <h3 class="title">选择新手机</h3>
+        </div>
+        <a href="#/shop-detail/{{'1'}}" style="width:50%;float:left;text-align:center;" ng-repeat="phone in [{'pic': './img/iphone5s.jpg','model': 'iPhone5'}, {'pic': './img/iphone5s.jpg','model': 'iPhone5s'}, {'pic': './img/iphone5s.jpg','model': 'iPhone6'}, {'pic': './img/iphone5s.jpg','model': 'iPhone6Plus'}, {'pic': './img/iphone5s.jpg','model': 'iPhone6s'}, {'pic': './img/iphone5s.jpg','model': 'iPhone6sPlus'}]">
+            <img style="width:100%" ng-src="{{phone.pic}}" />
+            <p>{{phone.model}}</p>
+        </a>
+    </ion-content>
+</ion-view>

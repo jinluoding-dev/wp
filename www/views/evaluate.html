@@ -1,0 +1,102 @@
+<ion-view view-title="旧机回收评估">
+    <ion-content has-header="false" style="top:0;background-color:#f0f0f6;">
+        <div class="evaluate-start" ng-if="step==0">
+            <div class="text-center padding">
+                <h3>旧机回收评估</h3>
+                <img ng-src="./img/iphone.png">
+            </div>
+            <div class="padding">
+                <ul>
+                    <li>1、来源不明的手机不回收</li>
+                    <li>2、收到快递，当天检验，当天付款</li>
+                </ul>
+            </div>
+            <div class="padding">
+                <h4>回收流程</h4>
+                <span>旧机评估 -></span>
+                <span>提交订单 -></span>
+                <span>寄送旧机</span>
+            </div>
+            </br>
+            <div class="text-center padding">
+                <a class="button button-assertive jld-btn-next" ng-click="nextStep()">开始评估</a>
+                <span class="jld-btn-next-note">剩余5步</span>
+            </div>
+        </div>
+        <div class="evaluate-content" ng-if="step==1">
+            <div class="padding">
+                <h3 class="title">可回收手机型号</h3>
+            </div>
+            <div class="list">
+                <label class="item item-radio" ng-repeat="model in ['iphone5','iphone5s','iphone6','iphone6 plus', 'iphone6s', 'iphone6s plus']">
+                    <input type="radio" name="model" ng-value="model">
+                    <div class="item-content">
+                        {{model}}
+                    </div>
+                    <i class="radio-icon ion-checkmark assertive"></i>
+                </label>
+            </div>
+            <div class="text-center padding">
+                <a class="button button-assertive jld-btn-next" ng-click="nextStep()">下一步</a>
+                <span class="jld-btn-next-note">剩余4步</span>
+            </div>
+        </div>
+        <div class="evaluate-content padding" ng-if="step==2">
+            <div class="padding">
+                <h3 class="title">购买渠道</h3>
+            </div>
+            <label class="jld-inline-radio" ng-repeat="model in ['大陆行货','香港行货','水货无锁','水货有锁']">
+                <input type="radio" name="where" ng-value="model">
+                <div class="item-content">
+                    {{model}}
+                </div>
+            </label>
+            <div class="padding">
+                <h3 class="title">储存容量</h3>
+            </div>
+            <label class="jld-inline-radio" ng-repeat="model in ['16G','32G','64G','128G']">
+                <input type="radio" name="stroage" ng-value="model">
+                <div class="item-content">
+                    {{model}}
+                </div>
+            </label>
+            <div class="text-center padding">
+                <a class="button button-assertive jld-btn-next" ng-click="nextStep()">下一步</a>
+                <span class="jld-btn-next-note">剩余3步</span>
+            </div>
+        </div>
+        <div class="evaluate-content padding" ng-if="step==3">
+            <div class="padding">
+                <h3 class="title">是否存在以下问题</h3>
+            </div>
+            <ul class="list">
+                <li class="item item-checkbox" ng-repeat="model in ['按键不正常','无法正常开机','通话不正常','触摸功能不正常','iCloud帐户无法注销','指纹功能不正常','拍照摄像不正常','充电不正常','无线不正常','屏幕进灰']">
+                    <label class="checkbox">
+                        <input type="checkbox" name="warn" ng-value="model" />
+                    </label>
+                    {{model}}
+                </li>
+            </ul>
+            <div class="text-center padding">
+                <a class="button button-assertive jld-btn-next" ng-click="nextStep()">下一步</a>
+                <span class="jld-btn-next-note">剩余1步</span>
+            </div>
+        </div>
+        <div class="evaluate-content padding" ng-if="step==4">
+            <div class="padding">
+                <h3 class="title">回收评估报告</h3>
+            </div>
+            <div class="item item-thumbnail-left" href="#">
+                <img src="./img/iphone5s.jpg">
+                <h2>iphone5s</h2>
+                <h2>购买渠道：{{'国行'}}</h2>
+                <h2>容量：{{'16GB'}}</h2>
+                <h2>RMB：{{'3280'}} <input type="button" class="button button-small button-clear " value="查看详情"/></h2>
+            </div>
+            <div class="text-center padding">
+                <a class="button button-assertive jld-btn-next">新机置换</a> 
+                <a class="button button-assertive jld-btn-next">回收旧机</a>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
