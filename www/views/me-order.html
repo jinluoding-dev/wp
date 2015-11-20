@@ -1,0 +1,47 @@
+<ion-view view-title="订单与支付">
+    <ion-content has-header="false" style="top:0;background-color:#f0f0f6;">
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <div class="item-input-inset fr-attention">
+            <label class="item item-radio item-input-wrapper fr-item-radio first">
+                <input type="radio" name="status" ng-click="resizeScroll()" value="00" ng-init="status='00'" ng-model="status">
+                <div class="item-content">
+                    未完成订单
+                </div>
+            </label>
+            <label class="item item-radio item-input-wrapper fr-item-radio last">
+                <input type="radio" name="status" ng-click="resizeScroll()" value="01" ng-model="status">
+                <div class="item-content">
+                    已完成订单
+                </div>
+            </label>
+        </div>
+        <div class="list" ng-if="status=='00'">
+            <div class="card">
+                <h3>订单类型：置换</h3>
+                <h3>编号：1121342131 <span style="float:right">2015年2月2日 12：32</span></h3>
+                <h2>iPhone5s 16G 白色 联通</h2>
+                <h3>折价旧机：iPhone5s</h3>
+                <h3>用户状态：未寄回 未支付</h3>
+                <h3>金锣钉状态：未验收 未发货</h3>
+            </div>
+            <div class="text-center padding">
+                <a class="button button-assertive jld-btn-next">查看详情</a>
+                <a class="button button-assertive jld-btn-next">马上寄回</a>
+                <a class="button button-assertive jld-btn-next">马上发货</a>
+            </div>
+            <div class="card">
+                <h3>订单类型：新购</h3>
+                <h3>编号：1121342131 <span style="float:right">2015年2月2日 12：32</span></h3>
+                <h2>iPhone5s 16G 白色 联通</h2>
+                <h3>折价旧机：iPhone5s</h3>
+                <h3>用户状态：未支付</h3>
+                <h3>金锣钉状态：未发货</h3>
+            </div>
+            <div class="text-center padding">
+                <a class="button button-assertive jld-btn-next">查看详情</a>
+            </div>
+        </div>
+        <div class="list" ng-if="status=='01'">
+        </div>
+    </ion-content>
+</ion-view>

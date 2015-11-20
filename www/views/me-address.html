@@ -1,0 +1,47 @@
+<ion-view view-title="收货信息">
+    <ion-content has-header="false" style="top:0;background-color:#f0f0f6;">
+        <h3>收货人信息</h3>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">收件人</span>
+                <input type="text">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">联系电话</span>
+                <input type="tel">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    选择省份
+                </div>
+                <select required="" class="form-control" ng-model="address.province" ng-options="key as key for (key,value) in division" ng-change="address.city='';address.district='';">
+                    <option value="">省</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    选择城市
+                </div>
+                <select class="form-control" ng-model="address.city" ng-options="key as key for (key,value) in division[address.province]" ng-change="address.district='';">
+                    <option value="">市</option>
+                </select>
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    选择区/县
+                </div>
+                <select class="form-control" ng-model="address.district" ng-options="value as value for value in division[address.province][address.city]">
+                    <option value="">区</option>
+                </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">配送地址</span>
+                <textarea placeholder=""></textarea>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">旧机苹果帐号</span>
+                <input type="email">
+            </label>
+        </div>
+    </ion-content>
+</ion-view>

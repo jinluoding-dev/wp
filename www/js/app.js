@@ -38,6 +38,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             controller: 'EvaluateCtrl'
         })
 
+        .state('evaluate-report', {
+            url: "/evaluate-report",
+            templateUrl: "views/evaluate-report.html",
+            controller: 'EvaluateReportCtrl'
+        })
+
         .state('shop', {
             url: "/shop",
             templateUrl: "views/shop.html",
@@ -49,6 +55,49 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             templateUrl: "views/shop-detail.html",
             controller: 'ShopDetailCtrl'
         })
+
+        .state('shop-insurance', {
+            url: "/shop-insurance",
+            templateUrl: "views/shop-insurance.html",
+            controller: 'ShopInsuranceCtrl'
+        })
+
+        .state('me-account', {
+            url: "/me-account",
+            templateUrl: "views/me-account.html",
+            controller: 'MeAccountCtrl'
+        })
+
+        .state('me-address', {
+            url: "/me-address",
+            templateUrl: "views/me-address.html",
+            controller: 'MeAddressCtrl'
+        })
+
+        .state('me-order', {
+            url: "/me-order",
+            templateUrl: "views/me-order.html",
+            controller: 'MeOrderCtrl'
+        })
+
+        .state('me-coupons', {
+            url: "/me-coupons",
+            templateUrl: "views/me-coupons.html",
+            controller: 'MeCouponsCtrl'
+        })
+
+        .state('me-express', {
+            url: "/me-express",
+            templateUrl: "views/me-express.html",
+            controller: 'MeExpressCtrl'
+        })
+
+        .state('me-express-order', {
+            url: "/me-express-order/:id",
+            templateUrl: "views/me-express-order.html",
+            controller: 'MeExpressOrderCtrl'
+        })
+
         // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/home');
 
