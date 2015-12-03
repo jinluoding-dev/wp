@@ -1,7 +1,7 @@
 <ion-view view-title="订单与支付">
     <ion-content has-header="false" style="top:0;background-color:#f0f0f6;">
         <ion-refresher on-refresh="doRefresh()"></ion-refresher>
-        <div class="item-input-inset fr-attention">
+        <div class="item-input-inset fr-attention" style="width:239px;">
             <label class="item item-radio item-input-wrapper fr-item-radio first">
                 <input type="radio" name="status" ng-click="resizeScroll()" value="00" ng-init="status='00'" ng-model="status">
                 <div class="item-content">
@@ -16,10 +16,10 @@
             </label>
         </div>
         <div class="list" ng-if="status=='00'">
-            <div class="card">
+            <div class="item card">
                 <p>订单类型：置换</p>
                 <p>编号：1121342131 <span style="float:right">2015年2月2日 12:32</span></p>
-                <h4>iPhone5s 16G 白色 联通</h4>
+                <h2>iPhone5s 16G 白色 联通</h2>
                 <p>折价旧机：iPhone5s</p>
                 <p>用户状态：未寄回 未支付</p>
                 <p>金螺钉状态：未验收 未发货</p>
@@ -29,10 +29,10 @@
                 <a class="button button-assertive jld-btn-next">马上寄回</a>
                 <a class="button button-assertive jld-btn-next">马上发货</a>
             </div>
-            <div class="card">
+            <div class="item card">
                 <p>订单类型：新购</p>
                 <p>编号：1121342131 <span style="float:right">2015年2月2日 12:32</span></p>
-                <h4>iPhone5s 16G 白色 联通</h4>
+                <h2>iPhone5s 16G 白色 联通</h2>
                 <p>折价旧机：iPhone5s</p>
                 <p>用户状态：未支付</p>
                 <p>金螺钉状态：未发货</p>
